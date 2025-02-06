@@ -65,4 +65,4 @@ void loop() {
 
 ```
 
-&copy; 2024 Licence SNDOC Lasalle Avignon - J.BEAUMONT
+&copy;
