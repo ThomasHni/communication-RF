@@ -7,7 +7,7 @@
 
 
 > [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
+> Mettre en place une communication RF
 
 - [Nomenclature](#nomenclature)
 - [Programme principal](#programme-principal)
