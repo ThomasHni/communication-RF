@@ -63,9 +63,5 @@ void loop() {
 }
 
 ```
-
-<<<<<<< HEAD
-&copy;
 =======
 &copy;
->>>>>>> d4a9bac90fb32f08860d3ff93048ed7cf84dfc7a
