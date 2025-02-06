@@ -7,7 +7,9 @@
 
 
 
-> Mise en oeuvre du module ADC d'un microcontroleur
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
 - [Nomenclature](#nomenclature)
 - [Programme principal](#programme-principal)
 
