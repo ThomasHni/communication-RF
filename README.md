@@ -12,9 +12,7 @@
 |:--------:|:--------:|:----------:|
 | ![TX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=TX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![RX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=RX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![Code Style](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/clang-format.yml?branch=main&label=Code%20Style&logo=prettier&logoColor=white&style=for-the-badge) |
 
-[![Open in VS Code](https://img.shields.io/badge/Open_in-VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://github.dev/ThomasHni/communication-RF)
-
-[![Open with VS Code](https://img.shields.io/badge/Open_with-VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](vscode://vscode.git/clone?url=https://github.com/ThomasHni/communication-RF)
+[![Ouvrir dans VSCode](https://img.shields.io/badge/Open_in-VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://github.dev/ThomasHni/communication-RF)
 
 </div>
 
