@@ -3,9 +3,11 @@
 ![Windows Badge](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white&style=plastic)
 
 <!-- Badges de statut de compilation -->
-![TX Build](https://img.shields.io/badge/📡_TX_Build-passing-44cc11?logo=platformio&logoColor=white&style=plastic)
-![RX Build](https://img.shields.io/badge/📡_RX_Build-passing-44cc11?logo=platformio&logoColor=white&style=plastic)
-![Code Style](https://img.shields.io/badge/🧹_Code_Style-passing-44cc11?logo=formatjs&logoColor=white&style=plastic)
+![TX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=📡%20TX%20Build&logo=platformio&logoColor=white&style=plastic)
+![RX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=📡%20RX%20Build&logo=platformio&logoColor=white&style=plastic)
+![Code Style](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/clang-format.yml?branch=main&label=🧹%20Code%20Style&logo=formatjs&logoColor=white&style=plastic)
+
+# tp-module-communication RF
 
 # tp-module-communication RF
 
