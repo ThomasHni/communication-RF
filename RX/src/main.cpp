@@ -9,15 +9,15 @@
 #include "RecepteurRF.h"
 
 // Constantes
-const int PIN_RECEPTION = 16;
+const int PIN_RECEPTION    = 16;
 const int PIN_TRANSMISSION = 17;
-const int VITESSE_CONSOLE = 9600;
-const int VITESSE_RF = 200;
-const int DELAI_AFFICHAGE = 1000;
+const int VITESSE_CONSOLE  = 9600;
+const int VITESSE_RF       = 200;
+const int DELAI_AFFICHAGE  = 1000;
 
 // Instances
 HardwareSerial portRF(2);
-RecepteurRF recepteur(portRF, PIN_RECEPTION, PIN_TRANSMISSION, VITESSE_RF);
+RecepteurRF    recepteur(portRF, PIN_RECEPTION, PIN_TRANSMISSION, VITESSE_RF);
 
 /**
  * @brief Initialisation du programme
@@ -33,7 +33,7 @@ void setup()
  * @brief Affiche le message reçu
  * @param message Message à afficher
  */
-void afficherMessage(const String &message)
+void afficherMessage(const String& message)
 {
     Serial.println("Reçu: " + message);
 }
@@ -43,7 +43,7 @@ void afficherMessage(const String &message)
  */
 void loop()
 {
-    if (recepteur.donneesDisponibles())
+    if(recepteur.donneesDisponibles())
     {
         String message = recepteur.lireMessage();
         afficherMessage(message);

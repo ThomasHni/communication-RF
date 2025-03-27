@@ -8,27 +8,23 @@
 /**
  * Constructeur par défaut
  */
-EmetteurRF::EmetteurRF(HardwareSerial &portSerie, int pinReception,
-                       int pinTransmission, int vitesse) : _portSerie(portSerie),
-                                                           _pinReception(pinReception),
-                                                           _pinTransmission(pinTransmission),
-                                                           _vitesseTransmission(vitesse),
-                                                           _idTrame(1)
+EmetteurRF::EmetteurRF(HardwareSerial& portSerie,
+                       int             pinReception,
+                       int             pinTransmission,
+                       int             vitesse) :
+    _portSerie(portSerie), _pinReception(pinReception), _pinTransmission(pinTransmission),
+    _vitesseTransmission(vitesse), _idTrame(1)
 {
 }
 
 /**
  * Constructeur de copie
  */
-EmetteurRF::EmetteurRF(const EmetteurRF &autre) : _portSerie(autre._portSerie),
-                                                  _pinReception(autre._pinReception),
-                                                  _pinTransmission(autre._pinTransmission),
-                                                  _vitesseTransmission(autre._vitesseTransmission),
-                                                  _prefixe(autre._prefixe),
-                                                  _separateur(autre._separateur),
-                                                  _numeroSerre(autre._numeroSerre),
-                                                  _idTrame(autre._idTrame),
-                                                  _finTrame(autre._finTrame)
+EmetteurRF::EmetteurRF(const EmetteurRF& autre) :
+    _portSerie(autre._portSerie), _pinReception(autre._pinReception),
+    _pinTransmission(autre._pinTransmission), _vitesseTransmission(autre._vitesseTransmission),
+    _prefixe(autre._prefixe), _separateur(autre._separateur), _numeroSerre(autre._numeroSerre),
+    _idTrame(autre._idTrame), _finTrame(autre._finTrame)
 {
 }
 
@@ -45,20 +41,21 @@ EmetteurRF::~EmetteurRF()
  */
 void EmetteurRF::initialiser()
 {
-    _portSerie.begin(_vitesseTransmission, SERIAL_8N1,
-                     _pinReception, _pinTransmission);
+    _portSerie.begin(_vitesseTransmission, SERIAL_8N1, _pinReception, _pinTransmission);
 }
 
 /**
  * Configure les paramètres de la trame
  */
-void EmetteurRF::configurerTrame(String prefixe, char16_t separateur,
-                                 uint8_t numeroSerre, String finTrame)
+void EmetteurRF::configurerTrame(String   prefixe,
+                                 char16_t separateur,
+                                 uint8_t  numeroSerre,
+                                 String   finTrame)
 {
-    _prefixe = prefixe;
-    _separateur = separateur;
+    _prefixe     = prefixe;
+    _separateur  = separateur;
     _numeroSerre = numeroSerre;
-    _finTrame = finTrame;
+    _finTrame    = finTrame;
 }
 
 /**
@@ -66,12 +63,9 @@ void EmetteurRF::configurerTrame(String prefixe, char16_t separateur,
  */
 String EmetteurRF::envoyerTrame(float temperature, char uniteTemp, uint8_t hygrometrie)
 {
-    String trame = _prefixe +
-                   String(_numeroSerre) + String(_separateur) +
-                   String(_idTrame) + String(_separateur) +
-                   String(temperature) +
-                   String(uniteTemp) + String(_separateur) +
-                   String(hygrometrie) + _finTrame;
+    String trame = _prefixe + String(_numeroSerre) + String(_separateur) + String(_idTrame) +
+                   String(_separateur) + String(temperature) + String(uniteTemp) +
+                   String(_separateur) + String(hygrometrie) + _finTrame;
 
     _portSerie.print(trame);
     return trame;

@@ -13,13 +13,13 @@
  */
 class RecepteurRF
 {
-private:
-    HardwareSerial &_portSerie;     // Port série utilisé
-    const int _pinReception;        // Pin de réception
-    const int _pinTransmission;     // Pin de transmission
-    const int _vitesseTransmission; // Vitesse de transmission
+  private:
+    HardwareSerial& _portSerie;           // Port série utilisé
+    const int       _pinReception;        // Pin de réception
+    const int       _pinTransmission;     // Pin de transmission
+    const int       _vitesseTransmission; // Vitesse de transmission
 
-public:
+  public:
     /**
      * @brief Constructeur par défaut
      * @param portSerie Port série à utiliser
@@ -27,13 +27,13 @@ public:
      * @param pinTransmission Pin TX
      * @param vitesse Vitesse de transmission
      */
-    RecepteurRF(HardwareSerial &portSerie, int pinReception, int pinTransmission, int vitesse);
+    RecepteurRF(HardwareSerial& portSerie, int pinReception, int pinTransmission, int vitesse);
 
     /**
      * @brief Constructeur de copie
      * @param autre Instance à copier
      */
-    RecepteurRF(const RecepteurRF &autre);
+    RecepteurRF(const RecepteurRF& autre);
 
     /**
      * @brief Destructeur

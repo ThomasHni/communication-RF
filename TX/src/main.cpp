@@ -9,26 +9,26 @@
 #include "EmetteurRF.h"
 
 // Constantes
-const int PIN_RECEPTION = 16;
+const int PIN_RECEPTION    = 16;
 const int PIN_TRANSMISSION = 17;
-const int VITESSE_CONSOLE = 9600;
-const int VITESSE_RF = 200;
-const int DELAI_ENVOI = 1000;
+const int VITESSE_CONSOLE  = 9600;
+const int VITESSE_RF       = 200;
+const int DELAI_ENVOI      = 1000;
 
 // Paramètres de la trame
-const String PREFIXE_TRAME = "SERRE";
-const char SEPARATEUR = ';';
-const uint8_t NUMERO_SERRE = 1;
-const String FIN_TRAME = "\r\n";
+const String  PREFIXE_TRAME = "SERRE";
+const char    SEPARATEUR    = ';';
+const uint8_t NUMERO_SERRE  = 1;
+const String  FIN_TRAME     = "\r\n";
 
 // Données du capteur (simulées)
-float temperature = 25.5;
+float          temperature       = 25.5;
 const char16_t UNITE_TEMPERATURE = 'C';
-uint8_t hygrometrie = 60;
+uint8_t        hygrometrie       = 60;
 
 // Instances
 HardwareSerial portRF(2);
-EmetteurRF emetteur(portRF, PIN_RECEPTION, PIN_TRANSMISSION, VITESSE_RF);
+EmetteurRF     emetteur(portRF, PIN_RECEPTION, PIN_TRANSMISSION, VITESSE_RF);
 
 /**
  * @brief Initialisation du programme
@@ -45,7 +45,7 @@ void setup()
  * @brief Affiche un message dans la console
  * @param message Message à afficher
  */
-void afficherMessage(const String &message)
+void afficherMessage(const String& message)
 {
     Serial.println("Envoyé: " + message);
 }

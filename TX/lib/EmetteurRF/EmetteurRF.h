@@ -13,19 +13,19 @@
  */
 class EmetteurRF
 {
-private:
-    HardwareSerial &_portSerie;     // Port série utilisé
-    const int _pinReception;        // Pin de réception
-    const int _pinTransmission;     // Pin de transmission
-    const int _vitesseTransmission; // Vitesse de transmission
+  private:
+    HardwareSerial& _portSerie;           // Port série utilisé
+    const int       _pinReception;        // Pin de réception
+    const int       _pinTransmission;     // Pin de transmission
+    const int       _vitesseTransmission; // Vitesse de transmission
 
-    String _prefixe;      // Préfixe de la trame (ex: "SERRE")
-    char _separateur;     // Caractère de séparation
+    String  _prefixe;     // Préfixe de la trame (ex: "SERRE")
+    char    _separateur;  // Caractère de séparation
     uint8_t _numeroSerre; // Numéro de la serre
     uint8_t _idTrame;     // Identifiant de la trame
-    String _finTrame;     // Fin de la trame (ex: "\r\n")
+    String  _finTrame;    // Fin de la trame (ex: "\r\n")
 
-public:
+  public:
     /**
      * @brief Constructeur par défaut
      * @param portSerie Port série à utiliser
@@ -33,14 +33,13 @@ public:
      * @param pinTransmission Pin TX
      * @param vitesse Vitesse de transmission
      */
-    EmetteurRF(HardwareSerial &portSerie, int pinReception,
-               int pinTransmission, int vitesse);
+    EmetteurRF(HardwareSerial& portSerie, int pinReception, int pinTransmission, int vitesse);
 
     /**
      * @brief Constructeur de copie
      * @param autre Instance à copier
      */
-    EmetteurRF(const EmetteurRF &autre);
+    EmetteurRF(const EmetteurRF& autre);
 
     /**
      * @brief Destructeur
@@ -59,8 +58,7 @@ public:
      * @param numeroSerre Numéro de la serre
      * @param finTrame Fin de trame
      */
-    void configurerTrame(String prefixe, char16_t separateur,
-                         uint8_t numeroSerre, String finTrame);
+    void configurerTrame(String prefixe, char16_t separateur, uint8_t numeroSerre, String finTrame);
 
     /**
      * @brief Envoie une trame avec les données fournies

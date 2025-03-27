@@ -8,21 +8,21 @@
 /**
  * Constructeur par défaut
  */
-RecepteurRF::RecepteurRF(HardwareSerial &portSerie, int pinReception,
-                         int pinTransmission, int vitesse) : _portSerie(portSerie),
-                                                             _pinReception(pinReception),
-                                                             _pinTransmission(pinTransmission),
-                                                             _vitesseTransmission(vitesse)
+RecepteurRF::RecepteurRF(HardwareSerial& portSerie,
+                         int             pinReception,
+                         int             pinTransmission,
+                         int             vitesse) :
+    _portSerie(portSerie), _pinReception(pinReception), _pinTransmission(pinTransmission),
+    _vitesseTransmission(vitesse)
 {
 }
 
 /**
  * Constructeur de copie
  */
-RecepteurRF::RecepteurRF(const RecepteurRF &autre) : _portSerie(autre._portSerie),
-                                                     _pinReception(autre._pinReception),
-                                                     _pinTransmission(autre._pinTransmission),
-                                                     _vitesseTransmission(autre._vitesseTransmission)
+RecepteurRF::RecepteurRF(const RecepteurRF& autre) :
+    _portSerie(autre._portSerie), _pinReception(autre._pinReception),
+    _pinTransmission(autre._pinTransmission), _vitesseTransmission(autre._vitesseTransmission)
 {
 }
 
@@ -39,8 +39,7 @@ RecepteurRF::~RecepteurRF()
  */
 void RecepteurRF::initialiser()
 {
-    _portSerie.begin(_vitesseTransmission, SERIAL_8N1,
-                     _pinReception, _pinTransmission);
+    _portSerie.begin(_vitesseTransmission, SERIAL_8N1, _pinReception, _pinTransmission);
 }
 
 /**
