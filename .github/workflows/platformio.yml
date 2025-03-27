@@ -1,0 +1,32 @@
+name: PlatformIO CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install PlatformIO
+      run: |
+        pip install platformio
+    
+    - name: Build TX Project
+      run: |
+        cd TX
+        pio run
+        
+    - name: Build RX Project
+      run: |
+        cd RX
+        pio run
