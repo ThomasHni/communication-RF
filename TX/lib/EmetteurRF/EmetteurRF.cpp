@@ -64,8 +64,7 @@ void EmetteurRF::configurerTrame(String prefixe, char16_t separateur,
 /**
  * Envoie une trame avec les données fournies
  */
-String EmetteurRF::envoyerTrame(float temperature, char uniteTemp, uint8_t hygrometrie)
-{
+String EmetteurRF::envoyerTrame(float temperature, char uniteTemp, uint8_t hygrometrie){
     String trame = _prefixe +
                    String(_numeroSerre) + String(_separateur) +
                    String(_idTrame) + String(_separateur) +
