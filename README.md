@@ -32,7 +32,7 @@
 
 ## Nomenclature
 
-- une carte [Wemos D1 R32](https://www.az-delivery.de/fr/products/esp32-d1-r32-board)
+  -  Carte [Wemos D1 R32](https://www.az-delivery.de/fr/products/esp32-d1-r32-board)
   
 <img src="./img/AZD.png" height="200" width="200" alt="carte arduino R3">
 
