@@ -1,19 +1,22 @@
-![C++ Badge](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=plastic)
-![PlatformIO Badge](https://img.shields.io/badge/build%20with-PlatformIO-orange?logo=platformio&logoColor=white&style=plastic)
-![Windows Badge](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white&style=plastic)
-
-<!-- Badges de statut de compilation -->
-![TX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=📡%20TX%20Build&logo=platformio&logoColor=white&style=plastic)
-![RX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=📡%20RX%20Build&logo=platformio&logoColor=white&style=plastic)
-![Code Style](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/clang-format.yml?branch=main&label=🧹%20Code%20Style&logo=formatjs&logoColor=white&style=plastic)
-
 # tp-module-communication RF
 
-# tp-module-communication RF
+<div align="center">
+
+## About
+| Langage | Framework | OS |
+|:-------:|:---------:|:--:|
+| ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white) | ![PlatformIO](https://img.shields.io/badge/PlatformIO-orange?style=for-the-badge&logo=platformio&logoColor=white) | ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) |
+
+## Test Status
+| TX Build | RX Build | Code Style |
+|:--------:|:--------:|:----------:|
+| ![TX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=TX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![RX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=RX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![Code Style](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/clang-format.yml?branch=main&label=Code%20Style&logo=prettier&logoColor=white&style=for-the-badge) |
+
+[![Open in Visual Studio Code](https://img.shields.io/badge/Open_in-Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](vscode://file/c:/Users/thoma/Documents/Uni/communication-RF)
+
+</div>
 
 **Objectifs :**
-
-
 
 > [!NOTE]  
 > Mettre en place une communication RF
@@ -47,7 +50,6 @@ framework = arduino
 Le fichier `src/main.cpp` initial :
 
 ```cpp
-
 /**     // TO DO
  * @file main.cpp
  * @author your name
@@ -70,7 +72,6 @@ void setup() {
 void loop() {
   // TO DO
 }
-
 ```
 =======
 &copy;
