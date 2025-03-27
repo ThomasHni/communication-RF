@@ -1,14 +1,14 @@
-# tp-module-communication RF
+# Module-communication RF
 
 <div align="center">
 
-## About
+## A Propos
 | Langage | Framework | OS |
 |:-------:|:---------:|:--:|
 | ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white) | ![PlatformIO](https://img.shields.io/badge/PlatformIO-orange?style=for-the-badge&logo=platformio&logoColor=white) | ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) |
 
-## Test Status
-| TX Build | RX Build | Code Style |
+## Status
+| TX Build | RX Build | Clang-Format |
 |:--------:|:--------:|:----------:|
 | ![TX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=TX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![RX Build](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/platformio.yml?branch=main&label=RX%20Build&logo=platformio&logoColor=white&style=for-the-badge) | ![Code Style](https://img.shields.io/github/actions/workflow/status/ThomasHni/communication-RF/clang-format.yml?branch=main&label=Code%20Style&logo=prettier&logoColor=white&style=for-the-badge) |
 
@@ -16,21 +16,25 @@
 
 </div>
 
+## Sommaire
+- [Module-communication RF](#module-communication-rf)
+  - [A Propos](#a-propos)
+  - [Status](#status)
+  - [Sommaire](#sommaire)
+  - [Nomenclature](#nomenclature)
+  - [Programme principal](#programme-principal)
+
+
 **Objectifs :**
 
 > [!NOTE]  
 > Mettre en place une communication RF
 
-- [Nomenclature](#nomenclature)
-- [Programme principal](#programme-principal)
-
----
-
 ## Nomenclature
 
 - une carte [Wemos D1 R32](https://www.az-delivery.de/fr/products/esp32-d1-r32-board)
   
-<img src="./images/AzD1R32.jpg" height="200" width="200" alt="carte arduino R3">
+<img src="./img/AZD.png" height="200" width="200" alt="carte arduino R3">
 
 ---
 
@@ -73,5 +77,7 @@ void loop() {
   // TO DO
 }
 ```
-=======
-&copy;
+
+---
+&copy; 
+Hnizdo Thomas 
