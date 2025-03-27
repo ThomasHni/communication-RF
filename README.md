@@ -5,9 +5,8 @@
 <!-- Badges de statut de compilation -->
 ![TX Build](https://img.shields.io/badge/📡_TX_Build-passing-44cc11?logo=platformio&logoColor=white&style=plastic)
 ![RX Build](https://img.shields.io/badge/📡_RX_Build-passing-44cc11?logo=platformio&logoColor=white&style=plastic)
-![Code Style](https://img.shields.io/badge/🧹_Code_Style-clang--format-blue?style=plastic)
+![Code Style](https://img.shields.io/badge/🧹_Code_Style-passing-44cc11?logo=formatjs&logoColor=white&style=plastic)
 
-# tp-module-communication RF
 # tp-module-communication RF
 
 **Objectifs :**
