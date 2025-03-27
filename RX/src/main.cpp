@@ -1,20 +1,52 @@
-#include <Arduino.h>
-#define RX 16
-#define TX 17
-HardwareSerial uC1(2);
+/**
+ * @file main.cpp
+ * @brief Programme principal du récepteur RF
+ * @version 1.0
+ * @date 2024-06-05
+ */
 
+#include <Arduino.h>
+#include "RecepteurRF.h"
+
+// Constantes
+const int PIN_RECEPTION = 16;
+const int PIN_TRANSMISSION = 17;
+const int VITESSE_CONSOLE = 9600;
+const int VITESSE_RF = 200;
+const int DELAI_AFFICHAGE = 1000;
+
+// Instances
+HardwareSerial portRF(2);
+RecepteurRF recepteur(portRF, PIN_RECEPTION, PIN_TRANSMISSION, VITESSE_RF);
+
+/**
+ * @brief Initialisation du programme
+ */
 void setup()
 {
-    Serial.begin(9600);                 // init vitesse transmition
-    uC1.begin(200, SERIAL_8N1, RX, TX); // init reception
+    Serial.begin(VITESSE_CONSOLE);
+    recepteur.initialiser();
+    Serial.println("Récepteur RF initialisé");
 }
 
+/**
+ * @brief Affiche le message reçu
+ * @param message Message à afficher
+ */
+void afficherMessage(const String &message)
+{
+    Serial.println("Reçu: " + message);
+}
+
+/**
+ * @brief Boucle principale
+ */
 void loop()
 {
-    if (uC1.available())
+    if (recepteur.donneesDisponibles())
     {
-        String message = uC1.readStringUntil('\n'); // reception
-        Serial.println("Recu:" + message);          // affichage
-        delay(1000);
+        String message = recepteur.lireMessage();
+        afficherMessage(message);
+        delay(DELAI_AFFICHAGE);
     }
 }
